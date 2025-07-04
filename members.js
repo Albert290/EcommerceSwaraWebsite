@@ -644,61 +644,69 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         /**
-         * Handles the form submission event.
-         * Performs validation, shows loading state, simulates submission, and displays success message.
-         */
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
+ * Handles the form submission event with Formspree integration.
+ */
+document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+    e.preventDefault(); // Prevent default form submission
 
-            // Validate form before proceeding
-            if (!validateForm()) {
-                return; // Stop if validation fails
+    // Validate form before proceeding
+    if (!validateForm()) {
+        return; // Stop if validation fails
+    }
+
+    // Show loading state on the submit button
+    const submitBtn = document.getElementById('submitBtn');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    const submitIcon = document.getElementById('submitIcon');
+    const submitText = document.getElementById('submitText');
+
+    submitBtn.disabled = true;
+    loadingSpinner.style.display = 'inline-block';
+    submitIcon.style.display = 'none';
+    submitText.textContent = 'Processing...';
+
+    try {
+        // Submit to Formspree
+        const formData = new FormData(this);
+        const response = await fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
             }
-
-            // Show loading state on the submit button
-            const submitBtn = document.getElementById('submitBtn');
-            const loadingSpinner = document.getElementById('loadingSpinner');
-            const submitIcon = document.getElementById('submitIcon');
-            const submitText = document.getElementById('submitText');
-
-            submitBtn.disabled = true;
-            loadingSpinner.style.display = 'inline-block';
-            submitIcon.style.display = 'none';
-            submitText.textContent = 'Processing...';
-
-            // Simulate form submission (e.g., AJAX request)
-            setTimeout(() => {
-                // In a real application, you would send the form data to a server here.
-                // Example: fetch('/api/register', { method: 'POST', body: new FormData(this) })
-                // .then(response => response.json())
-                // .then(data => { /* handle success */ })
-                // .catch(error => { /* handle error */ });
-
-                // Hide the registration form and display the success message
-                document.getElementById('registrationForm').style.display = 'none';
-                document.getElementById('successMessage').classList.add('show');
-
-                // Start countdown for redirection
-                let countdown = 5;
-                const countdownElement = document.getElementById('countdown');
-                countdownElement.textContent = countdown;
-
-                countdownInterval = setInterval(() => {
-                    countdown--;
-                    countdownElement.textContent = countdown;
-                    if (countdown <= 0) {
-                        clearInterval(countdownInterval);
-                        // Redirect to the payment URL based on the selected membership type
-                        const paymentUrl = MEMBERSHIP_CONFIG[currentMembershipType].paymentUrl;
-                        if (paymentUrl) {
-                            window.location.href = paymentUrl;
-                        } else {
-                            // Fallback if paymentUrl is not defined for some reason
-                            console.error('Payment URL not found for', currentMembershipType);
-                            closeModal(); // Just close modal if no redirect
-                        }
-                    }
-                }, 1000);
-
-            }, 2000); // Simulate 2 seconds processing time
         });
+
+        if (response.ok) {
+            // Hide form and show success message
+            document.getElementById('registrationForm').style.display = 'none';
+            document.getElementById('successMessage').classList.add('show');
+
+            // Start countdown for redirection
+            let countdown = 5;
+            const countdownElement = document.getElementById('countdown');
+            countdownElement.textContent = countdown;
+
+            countdownInterval = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = countdown;
+                
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    const paymentUrl = MEMBERSHIP_CONFIG[currentMembershipType].paymentUrl;
+                    if (paymentUrl) {
+                        window.location.href = paymentUrl;
+                    } else {
+                        closeModal(); // Fallback
+                    }
+                }
+            }, 1000);
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        // Show error message (you may want to add this element)
+        alert('Submission failed. Please try again.');
+        resetSubmitButton();
+    }
+});
