@@ -968,15 +968,16 @@ body {
     overflow-x: hidden;
 }
 
-/* Hero Banner */
+/* Enhanced Hero Banner with New Color Palette */
 .hero-banner {
     position: relative;
     height: 40vh;
-    background: var(--black);
+    background: linear-gradient(135deg, var(--primary) 0%, #2A4F7A 50%, var(--secondary) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-bottom: 3px solid var(--accent);
 }
 
 .hero-overlay {
@@ -985,26 +986,39 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    background: radial-gradient(
+        ellipse at center,
+        rgba(107, 162, 217, 0.15) 0%,
+        rgba(31, 60, 95, 0.1) 40%,
+        transparent 70%
+    );
     z-index: 1;
 }
 
 .hero-content {
     text-align: center;
     z-index: 2;
-    position: relative;
-    max-width: 800px;
+    position: relative; 
     padding: 0 20px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-title {
     font-size: 4rem;
     font-weight: 800;
-    color: var(--yellow);
+    background: linear-gradient(45deg, var(--white) 0%, var(--secondary) 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.3);
-    animation: fadeInUp 1s ease-out;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out, textShimmer 3s ease-in-out infinite;
     letter-spacing: -1px;
+    line-height: 1.2;
 }
 
 .hero-subtitle {
@@ -1015,8 +1029,9 @@ body {
     margin-bottom: 2rem;
     opacity: 0.95;
     animation: fadeInUp 1s ease-out 0.3s both;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+} 
 
 /* Animation keyframes */
 @keyframes fadeInUp {
@@ -1030,7 +1045,38 @@ body {
     }
 }
 
-/* Additional styling for enhanced UX */
+@keyframes textShimmer {
+    0%, 100% { 
+        filter: brightness(1); 
+    }
+    50% { 
+        filter: brightness(1.2); 
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.5);
+        opacity: 0.3;
+    }
+}
+
+@keyframes innerPulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.7;
+    }
+}
+
+/* Dynamic background elements */
 .hero-banner::before {
     content: '';
     position: absolute;
@@ -1038,16 +1084,53 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 0%, rgba(255, 215, 0, 0.05) 50%, transparent 100%);
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(245, 124, 81, 0.1) 25%,
+        transparent 50%,
+        rgba(107, 162, 217, 0.1) 75%,
+        transparent 100%
+    );
     z-index: 1;
-    animation: shimmer 3s ease-in-out infinite;
+    animation: shimmer 4s ease-in-out infinite;
 }
 
 @keyframes shimmer {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+    0%, 100% { 
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    50% { 
+        opacity: 1;
+        transform: translateX(100%);
+    }
 }
- 
+
+/* Floating particles effect */
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, var(--accent), transparent),
+        radial-gradient(2px 2px at 40% 70%, var(--secondary), transparent),
+        radial-gradient(1px 1px at 90% 40%, var(--white), transparent),
+        radial-gradient(1px 1px at 60% 10%, var(--accent), transparent);
+    background-repeat: no-repeat;
+    background-size: 400px 400px, 300px 300px, 200px 200px, 150px 150px;
+    animation: float 20s linear infinite;
+    z-index: 1;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(120deg); }
+    66% { transform: translateY(10px) rotate(240deg); }
+}
 .running-icons {
     position: absolute;
     top: 0;
