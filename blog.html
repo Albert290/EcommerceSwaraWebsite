@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Swaras</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+        
+</head>
+ 
+   <!-- Top Bar -->
+<div class="top-bar">
+    <div class="next-event">
+        <span>Next event:</span>Run Event: Warm up Run:United Kenya Club,Nairobi, Saturday, July 5.2025
+    </div>
+    <div class="contact-social">
+        <div class="phone">
+            <i class="fas fa-phone"></i> +254740894117
+        </div>
+        <div class="social-icons">
+            <a href="https://www.strava.com/clubs/244473" title="Strava" class="strava-icon">
+                <i class="fab fa-strava"></i>
+            </a>
+            <a href="https://connect.garmin.com/modern/group/18200" title="Garmin" class="garmin-icon">
+                <i class="fas fa-running"></i>
+            </a>
+            <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/urbanswaras" title="Facebook" class="facebook-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <a href="calendar.html#redirect" class="register-btn">
+             <span class="btn-text-full">Join Our Next Event</span>
+              <span class="btn-text-short">Join Our Next Event</span>
+        </a>
+    </div>
+</div>
+    
+   <!-- Main Header -->
+<header class="main-header">
+    <div class="header-container">
+        <div class="logo-section">
+            <img src="images/newest logo.jpg" alt="Urban Swaras Logo" class="logo">
+        </div>
+        
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link">
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="stories.html" class="nav-link">
+                        <span>Our Stories</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="members.html" class="nav-link">
+                        <span>Membership</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="regulation.html" class="nav-link">
+                        <span>Governance</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.urbanswaras.co.ke/" class="nav-link" target="_blank" rel="noopener noreferrer">
+                    <span>Duka La Swara</span>
+                  </a>
+                </li> 
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="data.html" class="nav-link">
+                        <span>Resources</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions"> 
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="close-menu" id="closeMenu">
+                <span>&times;</span>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <ul class="mobile-links">
+                <li class="mobile-item active">
+                    <a href="index.html" class="mobile-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="calendar.html" class="mobile-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                  <a href="stories.html" class="mobile-link">
+                     <i class="fas fa-book-open"></i>
+                     <span>Our Stories</span>
+                  </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="members.html" class="mobile-link">
+                        <i class="fas fa-users"></i>
+                        <span>Membership</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="regulation.html" class="mobile-link">
+                        <i class="fas fa-gavel"></i>
+                        <span>Governance</span>
+                    </a>
+                </li> 
+                <li class="mobile-item">
+                    <a href="https://www.urbanswaras.co.ke/" class="mobile-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Duka La Swara</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="contact.html" class="mobile-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="data.html" class="mobile-link">
+                        <i class="fas fa-download"></i>
+                        <span>Resources</span>
+                    </a>
+                </li> 
+            </ul>
+            
+            <!-- <div class="mobile-cta">  
+                <button class="mobile-cta-button">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Become a Member</span>
+                </button>
+            </div>-->
+        </nav>
+    </div>
+</header>
+
+ <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <div class="container">
+       <!-- Personal Running Journeys Section -->
+    <section class="personal-journeys-section" id="personal-journeys">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="journeys-header">
+                <h1>
+                    <i class="fas fa-route"></i>
+                    Personal Running Journeys
+                </h1>
+                <p>Stories from the Trail - Real Runners, Real Adventures</p>
+            </div>
+
+            <!-- Featured Story -->
+            <article class="featured-story">
+                <div class="story-header">
+                    <div class="story-image-container">
+                        <img src="documents/Downloads/stories.jpg" alt="Two runners on forest trail" class="story-image">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Trail Story</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-title-section">
+                        <h2 class="story-title">
+                            <span class="title-accent"></span>
+                            <span class="title-main"> Running With the Swara Engineer Who Fixes AngryBirds</span>
+                            <span class="title-subtitle"></span>
+                        </h2>
+                        <div class="story-meta">
+                            <span class="story-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Global Running Day
+                            </span>
+                            <span class="story-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Ngong Forest & Jaffery Sports Club
+                            </span>
+                            <span class="story-distance">
+                                <i class="fas fa-route"></i>
+                                10K Time Trial
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-content">
+                    <div class="story-text">
+                        <p class="story-intro">I have this friend—let's call him Omondi because that's his name. But you can also call him The Guy Who Talks to Planes. Not metaphorically. I mean, the man speaks hydraulics, breathes avionics, and dreams in engine diagrams. He doesn't just fix planes—he whispers to them. Licensed, certified, and qualified to touch anything that leaves the ground with passengers and prayer.</p>
+
+                        <p>But that's not why you're here. You're here because Omondi also runs. And not in the "once-around-the-estate-with-my-dog" kind of way. The man eats marathons like mandazis. I introduced him to the Urban Swaras Running Club four years ago and now he's faster than my excuses. He cruises at a pace between 3:50 and 4:10 per kilometre. I know people who can't even think that fast.</p>
+
+                        <blockquote class="story-quote">
+                            <p>"Bro, I'm landing tomorrow night. Let's catch up. A light 10K?"</p>
+                            <cite>- The Engineer's casual Friday call</cite>
+                        </blockquote>
+
+                        <p>A light 10K. You see what kind of friendship this is?</p>
+
+                        <p>Anyway, Friday night he lands. Saturday morning, 6:00 AM sharp—before God even finishes his tea—he's at my door. Dressed like someone about to chase gazelles in the savannah. Thank heavens I've been jogging here and there, pretending to be consistent. Also, it helps that Saturday is Long Run Day for Dedanites. (Find us in the book of IG under Coach Dedan Miricho.)</p>
+
+                        <p>So we lace up and hit the Ngong Forest Sanctuary. Two laps of the 5K route. Trees watching us like old uncles. We finish in one piece—thank you Strava, you digital witness of pain. If it's not on Strava, did you even suffer?</p>
+
+                        <p>Afterwards, he's like, "Let me know when you want another round."</p>
+
+                        <p>Fast forward. It's Global Running Day. I check Coach's notes and boom: 10K Time Trial.</p>
+
+                        <p>Who do I call? The man who converts free time into running sessions.</p>
+
+                        <div class="run-details">
+                            <h3>The Global Running Day Mission:</h3>
+                            <ul class="run-specs">
+                                <li><strong>Location:</strong> Nairobi Jaffery Sports Club</li>
+                                <li><strong>Time:</strong> 5:00 AM — aka before Nairobi wakes up and remembers it's tired</li>
+                                <li><strong>Mission:</strong> 10KM Time Trial</li>
+                                <li><strong>Coach:</strong> Dedan Miricho</li>
+                                <li><strong>Comrade:</strong> Engineer Omondi — runner, friend, fixer of planes and paces</li>
+                            </ul>
+                        </div>
+
+                        <p class="story-conclusion">Happy Global Running Day, fellow runners. May your legs be fast and your GPS accurate.</p>
+
+                        <div class="story-hashtags">
+                            <span class="hashtag">#UrbanSwaras</span>
+                            <span class="hashtag">#GlobalRunningDaysWithSwaras</span>
+                            <span class="hashtag">#RunningIsLiving</span>
+                            <span class="hashtag">#WeEngineerTrails</span>
+                        </div>
+                    </div>
+
+                    <div class="story-sidebar">
+                        <div class="runner-profile">
+                            <h4>
+                                <i class="fas fa-user-circle"></i>
+                                Runner Profile: The Engineer
+                            </h4>
+                            <div class="profile-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Pace Range</span>
+                                    <span class="stat-value">3:50 - 4:10/km</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Club Member</span>
+                                    <span class="stat-value">4 Years</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Specialty</span>
+                                    <span class="stat-value">Marathon Runner</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Day Job</span>
+                                    <span class="stat-value">Aircraft Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="related-content">
+                            <h4>
+                                <i class="fas fa-running"></i>
+                                More Running Stories
+                            </h4>
+                            <div class="related-links">
+                                <a href="#" class="related-link">
+                                    <i class="fas fa-mountain"></i>
+                                    Trail Adventures
+                                </a>
+                                <a href="#" class="related-link">
+                                    <i class="fas fa-stopwatch"></i>
+                                    Race Reports
+                                </a>
+                                <a href="#" class="related-link">
+                                    <i class="fas fa-users"></i>
+                                    Club Chronicles
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+        <!-- Club Newsletters Section -->
+        <section class="blog-section" id="club-newsletters">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-newspaper"></i>
+                    Club Newsletters
+                </h2>
+                <div class="date">Archive: 2018 - 2024</div>
+            </div>
+            <div class="section-content">
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-title">
+                                <i class="fas fa-calendar-alt"></i>
+                                Latest Newsletter
+                            </div>
+                            <div class="blog-date">December 2024</div>
+                            <a href="https://drive.google.com/file/d/1xigsjojfY5yLzirVp9taOWx5hhlManUh/view" class="blog-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read Newsletter
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-title">
+                                <i class="fas fa-leaf"></i>
+                                November 2019 Edition
+                            </div>
+                            <div class="blog-date">November 2019</div>
+                            <a href="https://urbanswaras.co.ke/wp-content/uploads/2019/11/USRC-Newsletter-November-2019.pdf" class="blog-link" target="_blank">
+                                <i class="fas fa-file-pdf"></i>
+                                Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-title">
+                                <i class="fas fa-sun"></i>
+                                August 2019 Edition
+                            </div>
+                            <div class="blog-date">August 2019</div>
+                            <a href="https://urbanswaras.co.ke/wp-content/uploads/2019/08/USRC_Newsletter_August_2019.pdf" class="blog-link" target="_blank">
+                                <i class="fas fa-file-pdf"></i>
+                                Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-title">
+                                <i class="fas fa-flower-tulip"></i>
+                                June 2019 Edition
+                            </div>
+                            <div class="blog-date">June 2019</div>
+                            <a href="https://urbanswaras.co.ke/wp-content/uploads/2019/06/USRC-Newsletter-June-2019.pdf" class="blog-link" target="_blank">
+                                <i class="fas fa-file-pdf"></i>
+                                Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-title">
+                                <i class="fas fa-seedling"></i>
+                                March 2019 Edition
+                            </div>
+                            <div class="blog-date">March 2019</div>
+                            <a href="https://urbanswaras.co.ke/wp-content/uploads/2019/03/USRC-Newsletter-March-2019.pdf" class="blog-link" target="_blank">
+                                <i class="fas fa-file-pdf"></i>
+                                Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-title">
+                                <i class="fas fa-snowflake"></i>
+                                January 2019 Edition
+                            </div>
+                            <div class="blog-date">January 2019</div>
+                            <a href="https://urbanswaras.co.ke/wp-content/uploads/2019/03/USRC-Newsletter-January-2019.pdf" class="blog-link" target="_blank">
+                                <i class="fas fa-file-pdf"></i>
+                                Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-title">
+                                <i class="fas fa-holly-berry"></i>
+                                December 2018 Edition
+                            </div>
+                            <div class="blog-date">December 2018</div>
+                            <a href="https://urbanswaras.co.ke/wp-content/uploads/2019/01/USRC-Newsletter-December-2018.pdf" class="blog-link" target="_blank">
+                                <i class="fas fa-file-pdf"></i>
+                                Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-title">
+                                <i class="fas fa-maple-leaf"></i>
+                                October 2018 Edition
+                            </div>
+                            <div class="blog-date">October 2018</div>
+                            <a href="https://urbanswaras.co.ke/wp-content/uploads/2018/11/USRC-Newsletter-October-2018.pdf" class="blog-link" target="_blank">
+                                <i class="fas fa-file-pdf"></i>
+                                Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Tips & Techniques Section -->
+        <section class="blog-section" id="training-tips">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-dumbbell"></i>
+                    Training Tips & Techniques
+                </h2>
+                <div class="date">Professional Training Programs</div>
+            </div>
+            <div class="section-content">
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-title">
+                                <i class="fas fa-route"></i>
+                                Half Marathon Training Program
+                            </div>
+                            <div class="blog-date">21KM - Standard Chartered 2018</div>
+                            <a href="https://urbanswaras.co.ke/wp-content/uploads/2018/08/21km-Training-Program-StanChart-2018.pdf" class="blog-link" target="_blank">
+                                <i class="fas fa-download"></i>
+                                Download Program
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-title">
+                                <i class="fas fa-medal"></i>
+                                Full Marathon Training Program
+                            </div>
+                            <div class="blog-date">42KM - Standard Chartered 2018</div>
+                            <a href="https://urbanswaras.co.ke/wp-content/uploads/2018/08/42km-Training-Program-StanChart-2018.pdf" class="blog-link" target="_blank">
+                                <i class="fas fa-download"></i>
+                                Download Program
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+ 
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Urban Swaras</h3>
+            <p class="footer-about">Nairobi's premier running community since 2006. Promoting recreational running and building friendships through shared miles.</p>
+        
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links"> 
+                <li><a href="calendar.html">Events</a></li>
+                <li><a href="stories.html">Our Stories</a></li>
+                <li><a href="members.html">Membership</a></li>
+                <li><a href="regulation.html">Governance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.urbanswaras.co.ke/">Duka La Swara</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+<div class="footer-column">
+    
+    <h3 class="footer-heading">Contact Us</h3>
+    <ul class="footer-contact">
+        <li><i class="fas fa-phone-alt"></i> +254740894117</li>
+        <li><i class="fas fa-envelope"></i> info@urbanswaras.co.ke</li>
+    </ul>
+    <div class="footer-social">
+        <a href="https://www.facebook.com/urbanswaras" aria-label="Facebook" class="facebook-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a><div class="contact-social">
+            <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a></div>
+        <a href="https://www.strava.com/clubs/244473" aria-label="Strava" class="strava-icon">
+            <i class="fab fa-strava"></i>
+        </a>
+        <a href="https://connect.garmin.com/modern/group/18200" aria-label="Garmin" class="garmin-icon">
+            <i class="fas fa-running"></i>
+        </a>
+    </div>
+</div>
+
+        <!-- Column 4: Newsletter -->
+       <div class="footer-column">
+         <h3 class="footer-heading">Stay Updated</h3>
+         <form class="newsletter-form" action="https://formspree.io/f/mkgbvjey" method="POST">
+             <input type="email" name="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+         </form>
+              <p class="footer-notes">Get notified about upcoming runs and events.</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Urban Swaras Running Club. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="data.html">Privacy Policy</a>
+            <a href="regulation.html">Terms of Use</a>
+        </div>
+    </div>
+</footer>
+<script src="blog.js"></script>
+</body>
+</html>
