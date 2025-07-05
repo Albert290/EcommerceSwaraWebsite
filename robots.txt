@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /documents/
+Sitemap: https://urbanswaras.co.ke/sitemap.xml
